@@ -86,6 +86,9 @@
     <ClInclude Include="cudaargs.h" />
     <ClInclude Include="gputimer.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test2.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 13.2.targets" />

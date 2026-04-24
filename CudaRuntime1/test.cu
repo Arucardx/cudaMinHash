@@ -1,3 +1,4 @@
+/*
 #pragma once 
 #include "cudaargs.h"
 #define CCCL_IGNORE_MSVC_TRADITIONAL_PREPROCESSOR_WARNING
@@ -43,7 +44,7 @@ __global__ void murmur3_32(uint8_t* __restrict__ buffer, uint32_t* __restrict__ 
 			for (size_t j = 0; j < 4; j++) {
 				k = k << 8 | buffer[data_start + i * 4 + 3 - j];
 			}
-
+;
 			k *= 0xcc9e2d51;
 			k = (k << 15) | (k >> 17);
 			k *= 0x1b873593;
@@ -359,6 +360,7 @@ __global__ void fill3(uint8_t* buffer, uint32_t length) {
 	}
 }
 
+/*
 int main()
 {
 
@@ -459,7 +461,6 @@ int test_pipeline() {
 
 	minhash << <num_texts, NUM_HASH_FUNCTIONS >> > (hashes, offsets, signatures, a, b);
 
-	*/
 
 	pipeline << <num_texts, 64 >> > (buffer, offsets, hashes, a, b, k, 0x01);
 
@@ -647,7 +648,6 @@ bool test_murmur3_32() {
 	for(int i = 0; i < num_hashes; i++) {
 		std::cout << "hashes[" << i << "] = " << hashes[i] << std::endl;
 	}
-	*/
 	uint32_t positions[] = { 0, 13, 26, 39 };
 
 	for (auto& position : positions) {
@@ -700,3 +700,4 @@ bool test_murmur3_32_2() {
 
 
 static int hash_parameters(std::string file_name, int length, uint32_t* a, uint32_t* b)
+*/
